@@ -1,17 +1,16 @@
 import 'package:flutter/material.dart';
 
-class HomePage extends StatefulWidget {
+class HomePage extends StatelessWidget {
   final String title;
   const HomePage({Key? key, this.title = 'HomePage'}) : super(key: key);
-  @override
-  HomePageState createState() => HomePageState();
-}
-class HomePageState extends State<HomePage> {
+
+  static Page page() => const MaterialPage<void>(child: HomePage());
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.title),
+        title: Text(title),
       ),
       body: Column(
         children: <Widget>[],
